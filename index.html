@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							main: 'Reggae One',
+						},
+						backgroundImage: {
+							japan: 'url("./img/Japan.jpg")',
+							tokyo: 'url("./img/Tokyo.jpg")',
+							kyoto: 'url("./img/Kyoto.jpg")',
+							osaka: 'url("./img/Osaka.jpg")',
+							nara: 'url("./img/Nara.jpg")',
+						},
+					},
+				},
+			}
+		</script>
+	</head>
+	<body>
+		<div
+			id="App"
+			class="relative w-screen h-screen z-20 bg-japan bg-cover flex items-center justify-center after:absolute after:w-screen after:-z-10 after:h-screen after:bg-gradient-to-b from-black/0 to-black/80"
+		>
+			<div id="glitch" class="absolute hidden w-screen h-screen bg-[url('./img/glitch-unscreen.gif')]"></div>
+
+			<div class="fixed justify-center w-full space-x-48 p-5 top-0 flex transition-all duration-500 hover:bg-black/80">
+				<div class="text-white space-x-6 font-main">
+					<a href="#" class="hover:text-rose-500">Tales of Japan</a>
+					<a href="#" class="hover:text-rose-500">Question</a>
+					<a href="#" class="hover:text-rose-500">Experience</a>
+					<input
+						type="search"
+						placeholder="search"
+						class="bg-transparent border border-white font-mono rounded-full px-5 py-1 text-lg outline-none placeholder:text-white hover:border-rose-500"
+					/>
+				</div>
+
+				<div>
+					<button
+						id="backMenu"
+						class="text-white bg-rose-500 cursor-pointer px-8 font-mono py-1 outline-none rounded-full hover:bg-rose-400"
+					>
+						EXPLORE
+					</button>
+				</div>
+			</div>
+
+			<div class="relative flex items-center justify-center -mt-15">
+				<div class="absolute text-center text-white w-72 h-72 bg-rose-900 opacity-50 rounded-full z-10">
+					<p class="text-[2rem] mt-6 font-main">東京都</p>
+				</div>
+				<h1
+					class="text-[10rem] text-white font-main z-20 select-none transition-all cursor-pointer hover:text-rose-500"
+				>
+					JAPAN
+				</h1>
+			</div>
+
+			<div class="fixed flex space-x-14 bottom-10 text-white z-10">
+				<div
+					id="Tokyo"
+					class="flex items-center justify-center space-x-3 cursor-pointer transition-all hover:scale-125 hover:text-rose-500"
+				>
+					<img src="./img/Tokyo.jpg" class="ring ring-gray-500 rounded-full w-9 h-9" />
+					<div>
+						<p class="text-[0.5rem] font-main text-gray-400">Lorem ipsum dolor sit amet.</p>
+						<span class="text-sm font-main">Tokyo</span>
+					</div>
+				</div>
+				<div
+					id="Kyoto"
+					class="flex items-center justify-center space-x-3 cursor-pointer transition-all hover:scale-125 hover:text-rose-500"
+				>
+					<img src="./img/Kyoto.jpg" class="ring ring-gray-500 rounded-full w-9 h-9" />
+					<div>
+						<p class="text-[0.5rem] font-main text-gray-400">Lorem ipsum dolor sit amet.</p>
+						<span class="text-sm font-main">Kyoto</span>
+					</div>
+				</div>
+				<div
+					id="Osaka"
+					class="flex items-center justify-center space-x-3 cursor-pointer transition-all hover:scale-125 hover:text-rose-500"
+				>
+					<img src="./img/Osaka.jpg" class="ring ring-gray-500 rounded-full w-9 h-9" />
+					<div>
+						<p class="text-[0.5rem] font-main text-gray-400">Lorem ipsum dolor sit amet.</p>
+						<span class="text-sm font-main">Osaka</span>
+					</div>
+				</div>
+				<div
+					id="Nara"
+					class="flex items-center justify-center space-x-3 cursor-pointer transition-all hover:scale-125 hover:text-rose-500"
+				>
+					<img src="./img/Nara.jpg" class="ring ring-gray-500 rounded-full w-9 h-9" />
+					<div>
+						<p class="text-[0.5rem] font-main text-gray-400">Lorem ipsum dolor sit amet.</p>
+						<span class="text-sm font-main">Nara</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
