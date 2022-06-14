@@ -1,5 +1,7 @@
 const main = document.getElementById('App')
 
+const title = document.getElementById('title')
+
 const tokyo = document.getElementById('Tokyo')
 const kyoto = document.getElementById('Kyoto')
 const osaka = document.getElementById('Osaka')
@@ -17,6 +19,7 @@ const changePage = (pageName) => {
 	})
 
 	main.classList.add(`bg-${pageName}`)
+	title.innerHTML = pageName.toUpperCase()
 
 	setTimeout(() => glitch.classList.add('hidden'), 500)
 }
